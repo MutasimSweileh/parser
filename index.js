@@ -1,12 +1,15 @@
 import express from 'express';
 import Parser from '@postlight/parser';
+import logger from 'logops';
+import morgan from 'morgan';
 
 const app = express()
 
 
 const port = process.env.PORT || 3000;
 
-
+//app.use(expressLogging(logger));
+app.use(morgan("combined"));
 app.listen(port, () => console.log(`App is listening on port ${port}.`));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));

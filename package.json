@@ -13,6 +13,8 @@
   "dependencies": {
     "@postlight/mercury-parser": "^2.2.1",
     "@postlight/parser": "^2.2.3",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "logops": "^2.1.2",
+    "morgan": "^1.10.0"
   }
 }
